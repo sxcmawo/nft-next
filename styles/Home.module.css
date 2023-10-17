@@ -1,0 +1,80 @@
+.main {
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0e0024;
+  color: #a06cff; 
+}
+
+
+.buttoncontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; 
+}
+
+.button {
+  padding: 10px 20px; 
+  border: none;
+  border-radius: 5px; 
+  background-color: #6f2ed8;
+  color: white;
+  font-size: 16px; 
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #3d1c74; 
+}
+
+
+@media (max-width: 600px) {
+  .main {
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .button {
+    width: 100%;
+    padding: 1em; /* Less padding on mobile */
+  }
+}
+
+
+/* cards.module.css */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates three columns of equal width */
+  gap: 20px; /* Adjust space as needed */
+  padding: 20px; /* Outer padding for better spacing */
+}
+
+.card {
+  position: relative; /* Relative positioning to host absolute-positioned elements */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  background-color: #f1f1f1;
+  overflow: hidden; /* Ensures the image doesn't overflow the card */
+}
+
+.cardimage {
+  width: 100%; /* Make sure image fills the card */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the whole area of the card-image container without stretching */
+}
+
+.cardcontent {
+  padding: 15px; /* Inner padding for the content */
+}
+
+/* Responsive styling for smaller screens */
+@media screen and (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+}
